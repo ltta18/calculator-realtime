@@ -1,12 +1,16 @@
 import React from "react";
-import { Button, Col, Row } from "antd";
+import {
+  Button,
+  Col,
+  Row
+} from "antd";
 import { Link } from "react-router-dom";
-
 import "./index.css";
 
-const Chatbox = ({ messages }) => {
+const Chatbox = ({ messages, socket }) => {
   const logout = () => {
     localStorage.removeItem('name');
+    socket.close();
   }
 
   return (
@@ -24,7 +28,7 @@ const Chatbox = ({ messages }) => {
         <ol className="messages-list">
           {messages?.map((message, i) => (
             <>
-              <div className="user-name">
+              <div className="username">
                 {message[0] ? message[0] : 'Anonymous'}:
               </div>
               <li

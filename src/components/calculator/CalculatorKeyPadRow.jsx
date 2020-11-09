@@ -1,10 +1,12 @@
-import { Col, Row } from 'antd';
 import React from 'react';
+import {
+  Col,
+  Row
+} from 'antd';
 
 const CalculatorKeyPadRow = ({ buttonContent, onPressCalculator }) => {
   return (
     <Row className="keypad-row">
-      {/* <div>Row</div> */}
       {buttonContent.map(item => (
         <Col
           span={item !== '=' ? 6 : 12}

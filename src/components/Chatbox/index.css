@@ -31,30 +31,17 @@
 }
 
 .message-item {
-  width: 55%;
   margin-bottom: 8px;
   padding: 12px 8px;
   word-break: break-word;
   color: white;
-}
-
-.my-message {
-  background-color: rgb(0, 132, 255);
-  margin-left: auto;
-}
-
-.received-message {
   width: 100%;
   background-color: #3f4042;
   margin-right: auto;
   box-sizing: border-box;
 }
 
-.messages-container, .new-message-input-field, .send-message-button {
-  border-color: #9a9a9a;
-}
-
-.user-name {
+.username {
   text-align: left;
   margin-left: 10px;
   font-weight: bold;
@@ -68,7 +55,7 @@
   border: 1px solid transparent;
   outline: none;
   transition: all .2s;
-  color: var(--color-pink-transparent);
+  color: var(--color-sapphire);
   display: flex !important;
   justify-content: center;
   align-items: center;
@@ -81,7 +68,7 @@
 
 .btn-submit, .btn:hover {
   color: var(--color-light-white);
-  background-color: var(--color-tomato);
+  background-color: var(--color-yale);
 }
 
 .btn:active {
