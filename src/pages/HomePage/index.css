@@ -1,0 +1,80 @@
+/* BaseCalculator */
+.calculator {
+  height: 80vh;
+  box-shadow: 0 2rem 4rem var(--shadow);
+  background-color: var(--color-light-black);
+}
+
+.calculator-body {
+  height: 100%;
+  width: 100%;
+  /* padding: 0 2rem; */
+  overflow: hidden;
+  white-space: no-wrap;
+  color: var(--color-light-white);
+  background-color: var(--color-tomato);
+}
+
+.result-screen {
+  height: 19vh;
+  font-size: 8rem;
+  font-weight: 600;
+  padding: 0 1rem;
+  /* To display the value at the bottom-right of the container */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.computation-screen {
+  height: 6vh;
+  font-size: 2.5rem;
+  padding: 0 1rem;
+  
+  /* To display the value at the bottom-right of the container */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.keypad {
+  height: 55vh;
+  width: 100%;
+  background-color: var(--color-black);
+}
+
+.keypad-row {
+  height: 11vh;
+  width: 100%;
+  display: flex;
+  color: white;
+}
+
+.btn {
+  font-size: 3rem;
+  font-family: inherit;
+  background-color: var(--color-white);
+  border: 1px solid transparent;
+  outline: none;
+  transition: all .2s;
+  color: var(--color-pink-transparent);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-number {
+  color: var(--color-black);
+}
+
+.btn-submit, .btn:hover {
+  color: var(--color-light-white);
+  background-color: var(--color-tomato);
+}
+
+.btn:active {
+  transform: scale(.95);
+  outline: none;
+  border: none;
+}

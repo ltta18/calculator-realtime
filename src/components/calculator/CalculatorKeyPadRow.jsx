@@ -10,7 +10,13 @@ const CalculatorKeyPadRow = ({ buttonContent, onPressCalculator }) => {
           span={item !== '=' ? 6 : 12}
           key={item}
           id={item}
-          className="btn"
+          className={
+            [...Array(10).keys()].includes(parseInt(item))
+            ? "btn btn-number"
+            : item === "="
+            ? "btn btn-submit"
+            : "btn"
+          }
           onClick={onPressCalculator}
         >
           {item}

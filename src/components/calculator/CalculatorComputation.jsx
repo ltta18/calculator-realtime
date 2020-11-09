@@ -5,4 +5,5 @@ const CalculatorComputation = ({ equation }) => (
     {equation}
   </div>
 );
+
 export default CalculatorComputation;

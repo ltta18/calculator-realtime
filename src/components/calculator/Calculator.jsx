@@ -3,7 +3,7 @@ import CalculatorComputation from './CalculatorComputation';
 import CalculatorKeyPad from './CalculatorKeyPad';
 import CalculatorResult from './CalculatorResult';
 
-const Calculator = () => {
+const Calculator = ({ socket }) => {
   const [equation, setEquation] = useState('');
   const [result, setResult] = useState('');
 
@@ -25,14 +25,18 @@ const Calculator = () => {
         const evalResult = eval(newEquation);
         const result = Number.isInteger(evalResult) ? evalResult : evalResult.toFixed(2);
         setResult(result)
+        socket.emit('equation-submit', `${newEquation} = ${result}`)
       } catch (error) {
         alert('Invalid Mathematical Equation');
       }
     }
-    else {
+    else if (button === '←') {
       newEquation = newEquation.trim();
       newEquation = newEquation.substr(0, newEquation.length - 1);
       newEquation = newEquation.trim();
+    }
+    else {
+      console.log("Invalid input")
     }
     setEquation(newEquation);
 

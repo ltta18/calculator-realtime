@@ -1,14 +1,17 @@
-import logo from './logo.svg';
+import HomePage from './pages/HomePage';
+import Login from './pages/LogIn';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import './styles/base.css';
 import 'antd/dist/antd.css';
-import Calculator from './components/calculator/Calculator';
-import HomePage from './pages/HomePage';
 
 const App = () => {
   return (
     <div className="App">
-      <HomePage />
+      <Switch>
+        <Route path='/' component={Login} />
+        <Route path='/homepage' component={HomePage} />
+      </Switch>
     </div>
   );
 }

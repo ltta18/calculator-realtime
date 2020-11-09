@@ -12,8 +12,13 @@ const CalculatorKeyPad = ({ onPressCalculator }) => {
 
   return (
     <div className="keypad">
-      {KEY_PAD.map((row, i) => <CalculatorKeyPadRow onPressCalculator={onPressCalculator} buttonContent={row} key={`row-${i}`} />)}
-      {/* <CalculatorKeyPadRow /> */}
+      {KEY_PAD.map((row, i) => (
+        <CalculatorKeyPadRow
+          onPressCalculator={onPressCalculator}
+          buttonContent={row}
+          key={`row-${i}`}
+        />
+      ))}
     </div>
   );
 }
