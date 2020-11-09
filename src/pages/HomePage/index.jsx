@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 import Chatbox from '../../components/Chatbox';
 import { Col, Row } from 'antd';
-import './index.css';
 import Calculator from '../../components/Calculator';
 
 const HomePage = () => {
@@ -25,9 +24,13 @@ const HomePage = () => {
   }, [])
 
   return (
-    <Row>
-      <Col span={12}><Chatbox messages={messages} /></Col>
-      <Col span={12}><Calculator socket={socket} /></Col>
+    <Row align="center" justify="center" style={{ height: '100%' }} gutter={[16, 0]}>
+      <Col xs={24} md={12} style={{ maxHeight: '100%' }}>
+        <Chatbox messages={messages} />
+      </Col>
+      <Col xs={24} md={12}>
+        <Calculator socket={socket} />
+      </Col>
     </Row>
   );
 }

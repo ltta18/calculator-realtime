@@ -31,3 +31,18 @@ body {
 
   --shadow: rgba(0, 0, 0, .4);
 }
+
+.enter-button > .ant-btn {
+  font-size: 3rem !important;
+}
+
+.ant-btn {
+  color: var(--color-white) !important;
+  background: var(--color-tomato) !important;
+  border-color: var(--color-tomato) !important;
+}
+
+.ant-btn:hover, .ant-btn:focus {
+  color: var(--color-black) !important;
+  background: var(--color-tomato) !important;
+}

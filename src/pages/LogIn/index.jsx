@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -16,14 +17,15 @@ const Login = () => {
 
   return (
     <div className="login-container">
+      <h1 className="room-name">Calculator Realtime</h1>
       <input
         type="text"
-        placeholder="name"
+        placeholder="Name"
         onChange={handleNameChange}
         className="text-input-field"
       />
       <Link to={`/homepage`} className="enter-button" onClick={handleClickEnterApp}>
-        Join app
+        <Button>Join app</Button>
       </Link>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CalculatorComputation from './CalculatorComputation';
 import CalculatorKeyPad from './CalculatorKeyPad';
 import CalculatorResult from './CalculatorResult';
+import './index.css';
 
 const Calculator = ({ socket }) => {
   const [equation, setEquation] = useState('');
@@ -25,7 +26,7 @@ const Calculator = ({ socket }) => {
         const evalResult = eval(newEquation);
         const result = Number.isInteger(evalResult) ? evalResult : evalResult.toFixed(2);
         setResult(result)
-        socket.emit('equation-submit', `${newEquation} = ${result}`)
+        socket.emit('equation-submit', [localStorage.getItem('name'), `${newEquation} = ${result}`])
       } catch (error) {
         alert('Invalid Mathematical Equation');
       }
