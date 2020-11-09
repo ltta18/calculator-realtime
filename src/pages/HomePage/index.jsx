@@ -19,7 +19,7 @@ const HomePage = () => {
       "transports" : ["websocket"]
     };
     
-    const socket = io('localhost:3000', connectionOptions);
+    const socket = io('https://fast-wave-12645.herokuapp.com/', connectionOptions);
     socket.on('chat-return', res => {
       setMessages(res)
     })

@@ -10,7 +10,7 @@ import "./index.css";
 const Chatbox = ({ messages, socket }) => {
   const logout = () => {
     localStorage.removeItem('name');
-    socket.close();
+    socket.disconnect();
   }
 
   return (
@@ -27,7 +27,7 @@ const Chatbox = ({ messages, socket }) => {
       <div className="messages-container">
         <ol className="messages-list">
           {messages?.map((message, i) => (
-            <>
+            <div key={`message-${i}`}>
               <div className="username">
                 {message[0] ? message[0] : 'Anonymous'}:
               </div>
@@ -37,7 +37,7 @@ const Chatbox = ({ messages, socket }) => {
               >
                 {message[1]}
               </li>
-            </>
+            </div>
           ))}
         </ol>
       </div>
