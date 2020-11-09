@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Calculator from '../components/calculator/Calculator';
 import io from 'socket.io-client';
-import Chatbox from '../components/chatbox/Chatbox';
+import Chatbox from '../../components/Chatbox';
 import { Col, Row } from 'antd';
 import './index.css';
+import Calculator from '../../components/Calculator';
 
 const HomePage = () => {
   const [socket, setSocket] = useState(null)
